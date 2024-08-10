@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="DEMORestAssured">
+        <classes>
+            <class name="TestCases.AddplaceTestCase">
+                <methods>
+                    <include name="testAddPlace"/>
+                </methods>
+            </class>
+            <class name="TestCases.GetplaceTestCase">
+                <methods>
+                    <include name="testAddPlace"/>
+                    <include name="testUpdatePlace"/>
+                    <include name="testGetPlace"/>
+                </methods>
+            </class>
+            <class name="TestCases.RegisterSuccessfulReqresTestCase">
+                <methods>
+                    <include name="testPostRequest"/>
+                </methods>
+            </class>
+            <class name="TestCases.RegisterUNSuccessfulReqresTestCase">
+                <methods>
+                    <include name="testPostRequest"/>
+                </methods>
+            </class>
+            <class name="TestCases.UpdateplaceTestCase">
+                <methods>
+                    <include name="testAddPlace"/>
+                    <include name="testUpdatePlace"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
